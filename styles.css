@@ -1,0 +1,113 @@
+/* =========================
+   Global Styles
+   ========================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2 {
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+/* =========================
+   Header & Navigation (Flexbox)
+   ========================= */
+.site-header {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.navbar ul {
+  display: flex;                 /* Flexbox layout */
+  justify-content: center;       /* Center links horizontally */
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+.hero {
+  background: #eafaf1;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* =========================
+   Grid Layout
+   ========================= */
+.grid-container {
+  display: grid;                 /* Grid layout */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   Footer
+   ========================= */
+.site-footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* =========================
+   Responsive Breakpoints
+   ========================= */
+
+/* Mobile First (default styles above) */
+
+/* Tablets (≥ 600px) */
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+
+/* Desktops (≥ 900px) */
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  }
+
+  .navbar ul {
+    justify-content: flex-end; /* Move nav links to the right */
+  }
+
+  .site-header {
+    text-align: left;
+    padding: 1rem 2rem;
+  }
+}
